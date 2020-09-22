@@ -1,0 +1,54 @@
+1. Check the current state of the directory structure.
+	[root@localhost ~]# ls
+	[root@localhost ~]# ls -R
+	
+2. Create directory ”redi” in home directory
+	[root@localhost ~]# mkdir Redi
+	
+3. Create three subdirectories inside “redi”: d1, d2, d3
+	[root@localhost ~]# cd Redi
+	[root@localhost Redi]# mkdir d1 d2 d3
+	
+4. In each of them, create files doc1.txt, doc2.txt and doc3.txt respectively.
+	[root@localhost Redi]# touch d1/doc1.txt
+	
+	[root@localhost Redi]# touch d2/doc2.txt
+	
+	[root@localhost d2]# cd ..
+	[root@localhost Redi]# cd d3
+	[root@localhost d3]# touch doc3.txt
+
+5. Copy file doc1.txt from d1 to d2.
+	[root@localhost Redi]# cp d1/doc1.txt d2
+	
+6. Move file doc1.txt from d2 to d3.
+	[root@localhost Redi]# mv d2/doc1.txt d3
+
+7. Delete folder d3 and then file doc2.txt in d2.
+	[root@localhost Redi]# rm -rf d3	
+	[root@localhost Redi]# rm d2/doc2.txt
+	
+8. Check the current state of “redi” folder.
+	[root@localhost Redi]# ls -R
+	
+9. Show the current working directory.
+	[root@localhost ~]# ls
+	
+10. Move file doc1.txt from d1 to d2.
+	[root@localhost Redi]# mv d1/doc1.txt d2
+	
+11. Create some content in doc1.txt in d2 and show it in command line.
+	[root@localhost Redi]# cat > d2/doc1.txt
+	[root@localhost Redi]# tail d2/doc1.txt
+
+
+12. Create directory d4 and doc4.txt inside it in “redi” folder.
+	[root@localhost Redi]# mkdir d4
+	[root@localhost Redi]# touch d4/doc4.txt
+	
+13. Search for all files ending with “*.txt”.
+	[root@localhost Redi]# find -name *.txt
+	
+14. Delete the whole “redi” folder.
+	[root@localhost Redi]# cd ..
+	[root@localhost ~]# rm -rf Redi

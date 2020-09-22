@@ -1,0 +1,73 @@
+Loading...
+ 
+Welcome to JS/Linux (x86)
+ 
+Use 'vflogin username' to connect to your account.
+You can create a new account at https://vfsync.org/signup .
+Use 'export_file filename' to export a file to your computer.
+Imported files are written to the home directory.
+ 
+[root@localhost ~]# ls
+dos       hello.c   hello.js
+[root@localhost ~]# ls -R
+.:
+dos       hello.c   hello.js
+ 
+./dos:
+asm-1.9     asm.com     debug.com   hpigot.com  hpigot.s
+ 
+./dos/asm-1.9:
+Changelog    display.s    expr.s       lister.s     readme.txt   symtab.i
+asm.s        dos.i        input.s      message.s    support.s    symtab.s
+direct.s     equ.s        license.txt  output.s     symbols.s
+[root@localhost ~]# mkdir Redi
+[root@localhost ~]# ls
+Redi      dos       hello.c   hello.js
+[root@localhost ~]# cd Redi
+[root@localhost Redi]# mkdir d1 d2 d3
+[root@localhost Redi]# touch d1/doc1.txt
+[root@localhost Redi]# cd d1
+[root@localhost d1]# ls
+doc1.txt
+[root@localhost d1]# cd ..
+[root@localhost Redi]# cd d2
+[root@localhost d2]# touch doc2.txt
+[root@localhost d2]# cd ..
+[root@localhost Redi]# touch d3/doc3.txt
+[root@localhost Redi]# cp d1/doc1.txt d2
+[root@localhost Redi]# mv d2/doc1.txt d3
+[root@localhost Redi]# rm -rf d3
+[root@localhost Redi]# rm d2/doc2.txt
+[root@localhost Redi]# ls
+d1  d2
+[root@localhost Redi]# ls -R
+.:
+d1  d2
+ 
+./d1:
+doc1.txt
+ 
+./d2:
+[root@localhost Redi]# mv d1/doc1.txt d2
+[root@localhost Redi]# cat > d2/doc1.txt
+Hello
+This is a sample text file created for the Assignment
+Using Command Prompt
+Thank you.
+[root@localhost Redi]# tail d2/doc1.txt
+Hello
+This is a sample text file created for the Assignment
+Using Command Prompt
+Thank you.
+[root@localhost Redi]# mkdir d4
+[root@localhost Redi]# touch d4/doc4.txt
+[root@localhost Redi]# find -name *.txt
+./d2/doc1.txt
+./d4/doc4.txt
+[root@localhost Redi]# rm -rf Redi
+[root@localhost Redi]# cd ..
+[root@localhost ~]# ls
+Redi      dos       hello.c   hello.js
+[root@localhost ~]# rm -rf Redi
+[root@localhost ~]# ls
+dos       hello.c   hello.js
